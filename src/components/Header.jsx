@@ -5,33 +5,33 @@ import { myContextApi } from "../ContextApi";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
-
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
+import "animate.css";
 
 const Header = () => {
   const { toggleNavlinks, showNavlinks } = useContext(myContextApi);
   return (
-    <div className="relative z-50">
-      <div className="flex justify-between md:p-5 gap-5 md:flex md:items-center md:sticky md:top-0 md:justify-between md:w-full md:z-20 md:px-5 bg-slate-100">
+    <div className="relative z-50 md:sticky md:top-0">
+      <div className="flex justify-between shadow-md gap-5 md:flex md:items-center  md:justify-between md:w-full md:z-20 md:px-5 bg-slate-100 md:py-2">
         <figure
           className={`${
             showNavlinks ? "hidden" : "block"
-          } w-20 md:block md:w-[15%] md:h-100px m-5`}
+          } md:flex md:flex-col md:items-center md:w-[20%] w-[20%] md:h-100px m-5 md:m-0 md:mt-2`}
         >
           <img
             src="AMWE5.png"
             alt="AMWE Official Logo"
-            className="md:w-full md:h-full bg-[#0F2F63] rounded-full shadow-lg"
+            className="md:w-[50%] md:h-full bg-[#0F2F63] rounded-full shadow-lg"
           />
+          <figcaption className="w-full md:text-sm md:font-normal p-1 hidden md:block outline outline-offset-2 font-extralight text-[10px] text-center leading-tight mt-1 bg-red-500 text-gray-200 rounded">
+            All Africa Medical & Wellness Expo
+          </figcaption>
         </figure>
 
-        <div className="w-full">
+        <div className="w-full md:w-[70%]">
           {!showNavlinks && (
-            <figure className="md:hidden relative float-right mr-10 mt-10 ">
+            <figure className="md:hidden relative float-right mr-10 mt-8  ">
               <GiHamburgerMenu
-                className="text-[#0F2F63] text-2xl md:hidden border scale-150"
+                className="text-[#0F2F63] text-2xl md:hidden border-red-500 border shadow-lg rounded scale-150"
                 onClick={toggleNavlinks}
               />
             </figure>
@@ -39,11 +39,10 @@ const Header = () => {
           <nav
             className={`${
               showNavlinks ? "flex" : "hidden"
-            } justify-between py-3 px-8 md:px-2  md:w-full md:h-12 md:border md:m-auto  md:top-0 outline outline-offset-1 bg-[#0F2F63] md:flex`}
-            data-aos="fade-left"
-            data-aos-offset="300"
-            data-aos-easing="ease-in"
-            data-aos-duration="500"
+            } justify-between py-3 px-8 md:px-2  md:w-full md:h-12 md:border md:m-auto  md:top-0 outline outline-offset-1 bg-[#0F2F63] md:flex animate__animated
+            animate__slideInRight
+            animate__duration-1s
+            animate__fadeIn`}
           >
             <ul className="flex flex-col overflow-hidden py-5 gap-2 md:py-0 md:flex md:flex-row md:items-center md:justify-around w-[80%] md:w-full text-gray-200 font-bold tracking-wide">
               <Link to="/">
