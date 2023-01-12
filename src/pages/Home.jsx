@@ -189,7 +189,7 @@ const Home = () => {
                 className="bg-gray-200 p-3 w-28 h-28 rounded-full"
                 data-aos="zoom-in"
                 data-aos-easing="linear"
-                data-aos-duration="1500"
+                data-aos-duration="1000"
               >
                 <img src="travel.svg" alt="" className="w-full h-full" />
               </figure>
@@ -202,7 +202,7 @@ const Home = () => {
                 className="bg-gray-200 p-3 w-28 h-28 rounded-full"
                 data-aos="zoom-in"
                 data-aos-easing="linear"
-                data-aos-duration="1500"
+                data-aos-duration="1000"
               >
                 <img src="network.svg" alt="" className="w-full h-full" />
               </figure>
@@ -215,7 +215,7 @@ const Home = () => {
                 className="bg-gray-200 p-3 w-28 h-28 rounded-full"
                 data-aos="zoom-in"
                 data-aos-easing="linear"
-                data-aos-duration="1500"
+                data-aos-duration="1000"
               >
                 <img src="display.svg" alt="" className="w-full h-full" />
               </figure>
@@ -228,7 +228,7 @@ const Home = () => {
                 className="bg-gray-200 p-3 w-28 h-28 rounded-full"
                 data-aos="zoom-in"
                 data-aos-easing="linear"
-                data-aos-duration="1500"
+                data-aos-duration="1000"
               >
                 <img src="increase.svg" alt="" className="w-full h-full" />
               </figure>
@@ -245,7 +245,7 @@ const Home = () => {
                 className="shadow-lg rounded hover:scale-105 transition-all duration-400"
                 data-aos="zoom-in"
                 data-aos-easing="linear"
-                data-aos-duration="1500"
+                data-aos-duration="1000"
               />
             </figure>
             <div className="md:w-1/3 text-gray-200 text-justify tracking-wider border-l-2 border-red-500 pl-3">
