@@ -72,9 +72,9 @@ const Home = () => {
     return () => clearInterval(slideInterval);
   }, [currentIndex]);
 
-  // useEffect(() => {
-  //   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  // }, []);
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <div className="relative top-28 md:top-0">

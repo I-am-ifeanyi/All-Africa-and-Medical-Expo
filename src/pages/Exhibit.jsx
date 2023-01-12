@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import exhibit1 from "../images/UNDER EXHIBIT/putyourproficiency.jpg";
 
 const Exhibit = () => {
+   useEffect(() => {
+     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+   }, []);
   return (
     <div className="md:p-10 p-5 relative top-36 md:top-0">
       <section>
