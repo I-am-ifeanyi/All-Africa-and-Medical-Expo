@@ -9,7 +9,15 @@ import sliding5 from "../images/Rotating-picture/sliding5.jpg";
 import sliding6 from "../images/Rotating-picture/sliding6.jpg";
 import whyexhibit from "../images/whyexhibit.jpg";
 
-import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+import {
+  AiFillCaretLeft,
+  AiFillCaretRight,
+  AiOutlineMail,
+  AiFillFacebook,
+  AiFillYoutube,
+  AiFillInstagram,
+} from "react-icons/ai";
+
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
@@ -22,26 +30,32 @@ const Home = () => {
     {
       id: 1,
       url: sliding1,
+      caption: "Sheraton Hotel, our Venue",
     },
     {
       id: 2,
       url: sliding2,
+      caption: "Image 1",
     },
     {
       id: 3,
       url: sliding3,
+      caption: "Image 2",
     },
     {
       id: 4,
       url: sliding4,
+      caption: "Image 3",
     },
     {
       id: 5,
       url: sliding5,
+      caption: "Image 4",
     },
     {
       id: 6,
       url: sliding6,
+      caption: "Image 5",
     },
   ];
 
@@ -72,12 +86,12 @@ const Home = () => {
     return () => clearInterval(slideInterval);
   }, [currentIndex]);
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  // }, []);
 
   return (
-    <div className="relative top-28 md:top-0">
+    <div className="relative md:top-0 w-full">
       <section className="">
         <div className="w-full h-full relative  overflow-hidden ">
           {slides.map((slide, index) => (
@@ -87,9 +101,12 @@ const Home = () => {
             >
               {index === currentIndex && (
                 <div className="w-4/4">
-                  <figure className="w-full h-[300px] md:h-[400px]">
-                    <img src={slide.url} className="w-full h-full" />
+                  <figure className="w-full h-[300px] border bg-cyan-800 md:h-[400px]">
+                    <img src={slide.url} className="w-full md:h-full h-auto" />
                   </figure>
+                  <figcaption className="mt-5 text-center">
+                    {slide.caption}
+                  </figcaption>
                 </div>
               )}
             </div>
@@ -112,24 +129,57 @@ const Home = () => {
           </div>
         </div>
         <div className="text-center bg-[#0F2F63] my-5 border-2 shadow-lg outline outline-offset-2  md:p-5 p-3 leading-tight text-gray-200 tracking-widest">
-          <h1 className="md:mb-4 mb-2 md:pb-2 md:text-3xl text-xl font-bold font-serif text-red-500 border-b-2 border-gray-200 w-[50%] relative m-auto">
+          <h1
+            className="md:mb-4 mb-2 md:pb-2 md:text-5xl text-4xl font-bold font-serif text-red-500 border-b-2 border-gray-200 md:w-[50%] relative m-auto"
+            data-aos="flip-up"
+          >
             WELCOME!!!
           </h1>
-          <p className="text-sm md:text-lg">
+          <p className="text-xl font-semibold md:text-3xl my-4">
             You are highly welcome to All Africa & Wellness Expo (AMWE 2023)
           </p>
-          <p className="text-sm md:text-lg mb-2">
-            The biggest event in Africa where the world decides the future of
-            Healthcare
+          <p className="text-xl font-semibold md:text-3xl my-4">
+            The biggest event in Africa{" "}
           </p>
-          <p
-            className="text-sm md:text-lg font-bold bg-red-500 md:w-[50%] w-[60%] relative m-auto border-2 border-gray-200"
+          <p className="text-xl font-semibold md:text-3xl my-4">
+            Where the world decides the future of Healthcare
+          </p>
+          <div
+            className="text-sm flex flex-col items-center md:text-lg font-bold bg-red-500 md:w-[50%] w-[90%] relative m-auto border-2 border-gray-200"
             data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration="1000"
           >
-            <i>Date</i>: 30<sup>th</sup> - 31<sup>th</sup> August
-          </p>
+            <p className="text-xl my-2">Live in-person:</p>
+            <p>
+              <i>Date</i>: 30<sup>th</sup> - 31<sup>th</sup> August
+            </p>
+            <p>
+              <i>Venue</i>: Sheraton Hotel, Abuja, Nigeria
+            </p>
+            <div className="flex gap-10 items-center justify-center my-5 w-full text-[#0F2F63]">
+              <div>
+                <a href="#">
+                  <AiOutlineMail className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <AiFillFacebook className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <AiFillYoutube className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <AiFillInstagram className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section>

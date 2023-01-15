@@ -17,7 +17,7 @@ import Footer from "./components/Footer"
 function App() {
 
   return (
-    <div className="App">
+    <div className="overflow-hidden">
       <Header />
       <Routes>
         <Route index element={<Home />} />

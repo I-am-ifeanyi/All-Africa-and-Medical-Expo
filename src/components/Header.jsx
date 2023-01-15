@@ -14,8 +14,8 @@ AOS.init();
 const Header = () => {
   const { toggleNavlinks, showNavlinks } = useContext(myContextApi);
   return (
-    <div className="fixed z-50 md:sticky md:top-0">
-      <div className="flex justify-between shadow-md gap-5 md:flex md:items-center  md:justify-between md:w-full md:z-20 md:px-5 bg-slate-100 md:py-2">
+    <div className="sticky top-0 z-50 ">
+      <div className="flex justify-between shadow-md md:flex md:items-center  md:justify-between md:w-full md:z-20 md:px-5 bg-slate-100 md:py-2">
         <figure
           className={`${
             showNavlinks ? "hidden" : "flex"
@@ -51,14 +51,14 @@ const Header = () => {
           <nav
             className={`${
               showNavlinks ? "flex" : "hidden"
-            } justify-between py-3 px-8 md:px-2 h-screen w-[410px] md:w-full md:h-12 md:border md:m-auto  md:top-0 outline outline-offset-1 bg-[#0F2F63] md:flex animate__animated
+            } z-50 justify-between py-3 px-8 md:px-2 h-screen w-[410px] md:w-full md:h-12 md:border-red-500 md:m-auto  md:top-0 md:outline-red-500 outline outline-offset-1 bg-[#0F2F63] md:flex animate__animated
             animate__slideInRight
             animate__fadeIn`}
           >
-            <ul className="flex flex-col overflow-hidden py-5 gap-2 md:py-0 md:flex md:flex-row md:items-center md:justify-around w-[80%] md:w-full text-gray-200 font-bold tracking-wide">
+            <ul className="flex flex-col overflow-hidden py-5 gap-2 md:py-0 md:flex md:flex-row md:items-center md:justify-around w-full md:w-full text-gray-200 font-bold tracking-wide">
               <Link to="/">
                 <li
-                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b w-full pb-3 md:pb-0"
+                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b md:border-none w-full pb-3 md:pb-0"
                   onClick={toggleNavlinks}
                 >
                   Home
@@ -66,7 +66,7 @@ const Header = () => {
               </Link>
               <Link to="aboutUs">
                 <li
-                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b w-full pb-3 md:pb-0"
+                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b md:border-none  w-full pb-3 md:pb-0"
                   onClick={toggleNavlinks}
                 >
                   About Us
@@ -74,7 +74,7 @@ const Header = () => {
               </Link>
               <Link to="exhibit">
                 <li
-                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b w-full pb-3 md:pb-0"
+                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b md:border-none  w-full pb-3 md:pb-0"
                   onClick={toggleNavlinks}
                 >
                   Exhibit
@@ -83,7 +83,7 @@ const Header = () => {
               <Link to="registration">
                 {" "}
                 <li
-                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b w-full pb-3 md:pb-0"
+                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b md:border-none w-full pb-3 md:pb-0"
                   onClick={toggleNavlinks}
                 >
                   Registration
@@ -91,7 +91,7 @@ const Header = () => {
               </Link>
               <Link to="conference">
                 <li
-                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b w-full pb-3 md:pb-0"
+                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b md:border-none w-full pb-3 md:pb-0"
                   onClick={toggleNavlinks}
                 >
                   Conference
@@ -99,7 +99,7 @@ const Header = () => {
               </Link>
               <Link to="awards">
                 <li
-                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b w-full pb-3 md:pb-0"
+                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b md:border-none w-full pb-3 md:pb-0"
                   onClick={toggleNavlinks}
                 >
                   Awards
@@ -107,7 +107,7 @@ const Header = () => {
               </Link>
               <Link to="travels">
                 <li
-                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b w-full pb-3 md:pb-0"
+                  className="hover:border-b-2 transition-all duration-300 border-red-500 border-b md:border-none w-full pb-3 md:pb-0"
                   onClick={toggleNavlinks}
                 >
                   Travel
