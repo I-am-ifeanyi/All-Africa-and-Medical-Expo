@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom"
 import Header from "./components/Header"
 import Home from "./pages/Home"
 import AboutUs from "./pages/AboutUs"
+import WelcomeMessage from "./pages/WelcomeMessage"
 import Exhibit from "./pages/Exhibit"
 import Registration from "./pages/Registration"
 import Conference from "./pages/Conference"
@@ -22,6 +23,8 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="aboutUs" element={<AboutUs />} />
+        <Route path="welcomeMessage" element={<WelcomeMessage />} />
+
         <Route path="exhibit" element={<Exhibit />} />
         <Route path="registration" element={<Registration />} />
         <Route path="conference" element={<Conference />} />

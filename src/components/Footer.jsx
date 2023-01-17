@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,17 +13,24 @@ const Footer = () => {
           <p>System Status</p>
         </div>
         <div className="shrink-0 flex flex-col gap-2 font-bold cursor-pointer">
-          <h1 className="text-xl md:border-b-2 md:border-red-500">EXHIBITION</h1>
-          <p>Exhibits</p>
-          <p>Register</p>
+          <h1 className="text-xl md:border-b-2 md:border-red-500">
+            EXHIBITION
+          </h1>
+          <p><Link to="exhibit">Exhibits</Link></p>
+          <p><Link to="registration">Register</Link></p>
           <p>Reviews</p>
         </div>
         <div className="shrink-0 flex flex-col gap-2 font-bold cursor-pointer">
-          <h1 className="text-xl md:border-b-2 md:border-red-500">REGISTRATION</h1>
-          <p>Guidelines</p>
-          <p>Discussions</p>
-          <p>Leaderboard</p>
-          <p>Twitter</p>
+          <h1 className="text-xl md:border-b-2 md:border-red-500  md:text-center">CONTACTS</h1>
+          <p>
+            <a href="tel:+2348063418882">Phone: +234 806 341 8882</a>
+          </p>
+          <p>
+            {" "}
+            <a href="mailto:amwe2023@gmail.com">Email: amwe2023@gmail.com</a>
+          </p>
+          <p></p>
+          <p></p>
         </div>
         <div className="shrink-0 flex flex-col gap-2 font-bold cursor-pointer">
           <h1 className="text-xl md:border-b-2 md:border-red-500">OTHERS</h1>
@@ -38,7 +46,7 @@ const Footer = () => {
             <img
               src="AMWE5.png"
               alt="AMWE Official Logo"
-              className="w-full md:h-full bg-[#0F2F63] rounded-full shadow-lg"
+              className="w-full md:h-full shadow-lg"
             />
           </figure>
           <figcaption className="bg-red-500 p-2 rounded-lg text-gray-200 text-sm">

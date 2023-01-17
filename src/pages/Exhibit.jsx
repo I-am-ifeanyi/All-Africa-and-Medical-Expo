@@ -14,7 +14,12 @@ import {
   AiFillFacebook,
   AiFillYoutube,
   AiFillInstagram,
+  AiOutlineCalendar,
+  AiFillLinkedin,
+  AiOutlineTwitter,
 } from "react-icons/ai";
+import { CiLocationOn } from "react-icons/ci"
+import {FaArrowsAltH} from "react-icons/fa"
 
 
 
@@ -24,11 +29,11 @@ import {
 
 
 const Exhibit = () => {
-  //  useEffect(() => {
-  //    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  //  }, []);
+   useEffect(() => {
+     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+   }, []);
   return (
-    <div className="md:p-10 py-10 px-5 relative  md:top-0">
+    <div className="md:p-10 py-10 px-5 relative md:mt-48  mt-32">
       <section>
         <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-around items-center">
           <figure
@@ -43,7 +48,7 @@ const Exhibit = () => {
               className="md:w-full md:h-full rounded-lg"
             />
           </figure>
-          <div className="w-full md:w-1/3 border-l-2 border-red-500 pl-2 ">
+          <div className="w-full md:w-1/3 pl-2 ">
             <h1 className="md:text-2xl mb-5 font-bold text-center md:text-start text-xl text-[#0F2F63]">
               PUT YOUR PROFICIENCY UNDER THE SPOTLIGHT
             </h1>
@@ -61,25 +66,29 @@ const Exhibit = () => {
           </div>
         </div>
         <div
-          className="w-full bg-red-500 my-5 md:my-10 flex flex-col items-center py-2 border-2 outline outline-offset-2 text-gray-200 font-bold rounded-lg tracking-wider cursor-pointer"
+          className="text-sm flex flex-col text-gray-200 items-center md:text-lg font-bold bg-red-500 md:w-[70%] w-full relative m-auto border-2 border-gray-200"
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration="1000"
         >
-          <div>
-            <i>Date</i>: 30<sup>th</sup> - 31<sup>th</sup> August
-          </div>
+          <p className="text-xl my-2">Live in-person:</p>
+          <AiOutlineCalendar className="scale-150 my-2" />
           <p>
-            <i>Venue</i>: Sheraton Hotel, Abuja, Nigeria
+            <i>Date</i>: 30<sup>th</sup> - 31<sup>th</sup> August
           </p>
-          <div className="flex gap-10 items-center justify-center my-5 w-full text-[#0F2F63]">
+          <CiLocationOn className="scale-150 my-2" />
+          <p className="text-center font-bold px-2">
+            <i>Venue</i>: Abuja Continental Hotel, popularly known as Sheraton,
+            Abuja, Nigeria.
+          </p>
+          <div className="flex gap-10 items-center justify-center mb-5 mt-10 w-full text-gray-200">
             <div>
-              <a href="#">
+              <a href="mailto:amwe2023@gmail.com">
                 <AiOutlineMail className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="https://web.facebook.com/amweevent">
                 <AiFillFacebook className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
               </a>
             </div>
@@ -93,16 +102,26 @@ const Exhibit = () => {
                 <AiFillInstagram className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
               </a>
             </div>
+            <div>
+              <a href="#">
+                <AiFillLinkedin className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <AiOutlineTwitter className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
       <section className="my-20">
-        <h1 className="text-2xl md:text-3xl font-semibold font-serif text-center">
+        <h1 className="text-2xl md:text-3xl font-semibold font-serif text-center text-[#0F2F63]">
           WHY EXHIBIT WITH US?
         </h1>
         <div className="mt-16 flex flex-col gap-10">
           <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-around items-center border-b-2 border-[#0F2F63]  pb-5">
-            <div className="w-full md:w-1/3 border-l-2 border-red-500 pl-2 ">
+            <div className="w-full md:w-1/3 pl-2 ">
               <h1 className="md:text-2xl mb-5 font-bold text-center md:text-start text-xl text-[#0F2F63]">
                 EXPLORE THE BIGGEST MARKET ON THE GLOBE
               </h1>
@@ -129,7 +148,7 @@ const Exhibit = () => {
             </figure>
           </div>
           <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-around items-center border-b-2 border-[#0F2F63]  pb-5">
-            <div className="w-full md:w-1/3 border-l-2 border-red-500 pl-2 ">
+            <div className="w-full md:w-1/3 pl-2 ">
               <h1 className="md:text-2xl mb-5 font-bold text-center md:text-start text-xl text-[#0F2F63]">
                 NETWORK WITH YOUR TARGET MARKET{" "}
               </h1>
@@ -156,7 +175,7 @@ const Exhibit = () => {
             </figure>
           </div>
           <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-around items-center border-b-2 border-[#0F2F63]  pb-5">
-            <div className="w-full md:w-1/3 border-l-2 border-red-500 pl-2 ">
+            <div className="w-full md:w-1/3 pl-2 ">
               <h1 className="md:text-2xl mb-5 font-bold text-center md:text-start text-xl text-[#0F2F63]">
                 INCREASE YOUR INTERNATIONAL PRESENCE
               </h1>
@@ -184,7 +203,7 @@ const Exhibit = () => {
             </figure>
           </div>
           <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-around items-center border-b-2 border-[#0F2F63]  pb-5">
-            <div className="w-full md:w-1/3 border-l-2 border-red-500 pl-2 ">
+            <div className="w-full md:w-1/3 pl-2 ">
               <h1 className="md:text-2xl mb-5 font-bold text-center md:text-start text-xl text-[#0F2F63]">
                 DISCOVER NEW INNOVATIONS
               </h1>
@@ -212,7 +231,7 @@ const Exhibit = () => {
             </figure>
           </div>
           <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-around items-center border-b-2 border-[#0F2F63]  pb-5">
-            <div className="w-full md:w-1/3 border-l-2 border-red-500 pl-2 ">
+            <div className="w-full md:w-1/3 pl-2 ">
               <h1 className="md:text-2xl mb-5 font-bold text-center md:text-start text-xl text-[#0F2F63]">
                 BUILD AN ENGAGING RELATIONSHIP
               </h1>
@@ -239,7 +258,7 @@ const Exhibit = () => {
             </figure>
           </div>
           <div className="flex flex-col md:flex-row gap-5 md:gap-0 justify-around items-center border-b-2 border-[#0F2F63]  pb-5">
-            <div className="w-full md:w-1/3 border-l-2 border-red-500 pl-2 ">
+            <div className="w-full md:w-1/3 pl-2 ">
               <h1 className="md:text-2xl mb-5 font-bold text-center md:text-start text-xl text-[#0F2F63]">
                 EXCHANGE VIEWS AND IDEAS
               </h1>
@@ -324,6 +343,76 @@ const Exhibit = () => {
           </div>
         </div>
       </section>
+      <div className="md:w-2/3 relative m-auto">
+        <h1 className="text-2xl font-bold text-[#0F2F63] text-center my-10">
+          WHO TO EXHIBIT TO?
+        </h1>
+        <div className="flex flex-col items-center w-full">
+          <p className="font-bold tracking-wider border-t-4 border-red-500 bg-[#0F2F63] p-10 text-gray-200 rounded-t-full">
+            AMWE 2023
+          </p>
+          <div className="flex">
+            <div className="w-1 h-20 bg-[#0F2F63] md:rotate-45 "></div>
+            <div className="w-1 h-20 bg-[#0F2F63] md:-rotate-45 hidden md:block "></div>
+          </div>
+          <div className="flex md:flex-row flex-col items-center gap-2">
+            <p className="w-[150px] h-[80px] text-center text-sm grid border-t-4 bg-[#0F2F63] rounded-t-full place-items-center border-red-500 text-gray-200 px-3">
+              Phamarceutical Companies
+            </p>
+            <FaArrowsAltH className="text-bold text-[#0F2F63] rotate-90 md:rotate-0 scale-150" />
+            <p className="w-[150px] h-[80px] text-center text-sm grid rounded-t-full place-items-center border-t-4 border-red-500 bg-[#0F2F63] text-gray-200 px-3">
+              Medical Associations
+            </p>
+            <FaArrowsAltH className="text-bold text-[#0F2F63] rotate-90 md:rotate-0 scale-150" />
+            <p className="w-[150px] h-[80px] text-center text-sm grid rounded-t-full place-items-center border-t-4 bg-[#0F2F63] border-red-500 text-gray-200 px-3">
+              Government Agencies
+            </p>
+            <FaArrowsAltH className="text-bold text-[#0F2F63] rotate-90 md:rotate-0 scale-150" />
+            <p className="w-[150px] h-[80px] text-center text-sm grid rounded-t-full place-items-center border-t-4  border-red-500 bg-[#0F2F63] text-gray-200 px-3">
+              Hospitals & Clinics
+            </p>
+          </div>
+        </div>
+        <div className="my-10">
+          <p>
+            Based on the network we have been able to build over time, there are
+            almost inexhuastible list of reliable partners and organizations
+            that our sponsors can exhibit to. Asides the ones highlighted above,
+            the lists are endless but we will do well to list a few in no
+            particular order:{" "}
+          </p>
+          <div className="mt-5">
+            <li>Medical Equipment Manufacturers</li>
+            <li>Medical Cosmetic and Healthcare Products Manufacturers</li>
+            <li>Health Insurance Companies</li>
+            <li>Travel Insurance Companies</li>
+            <li>Medical Tourism Companies</li>
+            <li>Healthcare Professionals</li>
+            <li>Schools of Medicine</li>
+            <li>Colleges and Institutions</li>
+            <li>Emergency Services</li>
+            <li>Physiotherapists</li>
+            <li>Blood Bank Centers</li>
+            <li>Rehabilitation Centers</li>
+            <li>Alternative Medical Centers</li>
+            <li>SPA and Wellness Centers</li>
+            <li>Land, Air and Sea Ambulance Service Companies</li>
+            <li>Health Tourism and Publication</li>
+            <li>Paramedical Colleges</li>
+            <li>Hospital Management App and Software</li>
+            <li>Travel Agencies</li>
+            <li>Airports and Airlines</li>
+            <li>Hotels</li>
+            <li>Car Rental Companies</li>
+            <li>Restaurants</li>
+            <li>Catering and Event Management Companies</li>
+            <li>Media Houses</li>
+            <li>Bloggers</li>
+            <li>Embassies</li>
+            <li>Fitness Centers</li>
+          </div>
+        </div>
+      </div>
       <section className="my-10 md:w-2/3 relative m-auto">
         <h1 className="text-2xl font-bold text-[#0F2F63] my-5">
           SPONSORSHIP OPPORTUNITIES
@@ -381,25 +470,29 @@ const Exhibit = () => {
           </ul>
         </div>
         <div
-          className="w-full bg-red-500 my-5 md:my-10 flex flex-col items-center py-2 border-2 outline outline-offset-2 text-gray-200 font-bold rounded-lg tracking-wider cursor-pointer"
-          data-aos="zoom-in"
+          className="text-sm flex flex-col text-gray-200 items-center md:text-lg font-bold bg-red-500 md:w-[70%] w-full relative m-auto border-2 border-gray-200"
+          data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration="1000"
         >
-          <div>
-            <i>Date</i>: 30<sup>th</sup> - 31<sup>th</sup> August
-          </div>
+          <p className="text-xl my-2">Live in-person:</p>
+          <AiOutlineCalendar className="scale-150 my-2" />
           <p>
-            <i>Venue</i>: Sheraton Hotel, Abuja, Nigeria
+            <i>Date</i>: 30<sup>th</sup> - 31<sup>th</sup> August
           </p>
-          <div className="flex gap-10 items-center justify-center my-5 w-full text-[#0F2F63]">
+          <CiLocationOn className="scale-150 my-2" />
+          <p className="text-center font-bold px-2">
+            <i>Venue</i>: Abuja Continental Hotel, popularly known as Sheraton,
+            Abuja, Nigeria.
+          </p>
+          <div className="flex gap-10 items-center justify-center mb-5 mt-10 w-full text-gray-200">
             <div>
-              <a href="#">
+              <a href="mailto:amwe2023@gmail.com">
                 <AiOutlineMail className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="https://web.facebook.com/amweevent">
                 <AiFillFacebook className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
               </a>
             </div>
@@ -413,9 +506,19 @@ const Exhibit = () => {
                 <AiFillInstagram className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
               </a>
             </div>
+            <div>
+              <a href="#">
+                <AiFillLinkedin className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <AiOutlineTwitter className="scale-150 w-5 h-5 hover:translate-y-1 transition-all duration-500" />
+              </a>
+            </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row md:flex-wrap gap-16 my-10 md:my-10 md:gap-0 md:px-10 md:py-16 p-5 justify-around tracking-wider font-bold cursor-pointer">
+        <div className="flex flex-col md:flex-row gap-16 my-10 md:my-10 md:gap-5 md:px-5 md:py-16 p-5 tracking-wider font-bold cursor-pointer w-full">
           <div
             className="flex flex-col items-center"
             data-aos="fade-left"
